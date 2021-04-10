@@ -1,7 +1,93 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap'); */
+
+#main {
+  padding: 40px;
 }
 
+.app {
+  padding-left: 10px;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.desc {
+  text-decoration: underline;
+  margin-bottom: -10px;
+  font-weight: 500;
+}
+
+#divide {
+  margin-left: -20px;
+  margin-bottom: 90px;
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(78, 75, 75)
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  margin: 20px;
+  margin-left: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 650px
+}
+
+.content {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 20px;
+  padding: 20px
+}
+
+#gif {
+  text-align: center;
+  height: 50vh;
+  width: 100vw;
+  clip-path: polygon(100% 0, 100% 80%, 60% 80%, 50% 100%, 40% 80%, 0 80%, 0 0);
+  background-image: url('https://acegif.com/wp-content/gifs/water-43.gif');
+  background-size: cover;
+  background-position: 50% 15%;
+  color: rgb(78, 75, 75)
+}
+
+ul {
+  text-align: end;
+  margin: 0;
+  list-style-type: none;
+  padding-right: 25px;
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+h1 {
+  padding-top: 10px;
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 100;
+  color: white;
+  padding-top: 20px;
+}
+
+/*ffae00 ff5e00*/
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,14 +100,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  background-color: #22313f;
+  min-height: 150vh;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
