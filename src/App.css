@@ -15,7 +15,16 @@
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -28,7 +37,7 @@
 
 #divide {
   margin-left: -20px;
-  margin-bottom: 90px;
+  margin-bottom: 57.5px;
   width: 50%;
 }
 
@@ -42,8 +51,8 @@ a:hover {
 }
 
 .card {
-  margin: 20px;
-  margin-left: 0;
+  margin-top: 57.5px;
+  margin-bottom: 57.5px;
   background-color: rgba(255, 255, 255, 0.25);
   width: 650px
 }
