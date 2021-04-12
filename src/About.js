@@ -15,7 +15,7 @@ export default function About() {
  if(tab){
   general = '';
   interest = 'tab';
-  dispI = {marginBottom:80};
+  dispI = {height:600};
   dispG = {display:'none'};
  }
 
@@ -36,10 +36,10 @@ export default function About() {
           <h3 style={{color:'white', fontSize:55}}>my interests</h3>
           <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
           <div id='circle-left'></div><div id='likes'>
-              <img src='https://media.giphy.com/media/61dkbcuaYYv1ykvJnB/giphy.gif' width='150' style={{position:'relative', bottom:20, right:`55px`}} onClick={()=>{setSports({}); setSpace({display:'none'}); setTravel({display:'none'}); setCook({display:'none'});}}/>
-              <img src={solar} width='160' style={{position:'relative', bottom:15,right:`20px`}} onClick={()=>{setSports({display:'none'}); setSpace({}); setTravel({display:'none'}); setCook({display:'none'});}}/>
-              <img src='https://media.giphy.com/media/ckrbT1rPtrt1rGM19p/giphy.gif' width='130' style={{position:'relative', bottom:5,right:`-15px`}} onClick={()=>{setSports({display:'none'}); setSpace({display:'none'}); setTravel({}); setCook({display:'none'});}}/>
-              <img src='https://media.giphy.com/media/KfxPgR9Xb6lRvlFa8x/giphy.gif' width='100' style={{position:'relative', bottom:35, right:`-50px`}} onClick={()=>{setSports({display:'none'}); setSpace({display:'none'}); setTravel({display:'none'}); setCook({});}}/>
+              <img src='https://media.giphy.com/media/61dkbcuaYYv1ykvJnB/giphy.gif' width='150' style={{position:'relative', bottom:20, right:`55px`, cursor:'pointer'}} onClick={()=>{setSports({}); setSpace({display:'none'}); setTravel({display:'none'}); setCook({display:'none'});}}/>
+              <img src={solar} width='160' style={{position:'relative', bottom:15,right:`20px`, cursor:'pointer'}} onClick={()=>{setSports({display:'none'}); setSpace({}); setTravel({display:'none'}); setCook({display:'none'});}}/>
+              <img src='https://media.giphy.com/media/ckrbT1rPtrt1rGM19p/giphy.gif' width='130' style={{position:'relative', bottom:5,right:`-15px`, cursor:'pointer'}} onClick={()=>{setSports({display:'none'}); setSpace({display:'none'}); setTravel({}); setCook({display:'none'});}}/>
+              <img src='https://media.giphy.com/media/KfxPgR9Xb6lRvlFa8x/giphy.gif' width='100' style={{position:'relative', bottom:35, right:`-50px`, cursor:'pointer'}} onClick={()=>{setSports({display:'none'}); setSpace({display:'none'}); setTravel({display:'none'}); setCook({});}}/>
               </div>  <div id='circle-right'></div>
             </div>
            
