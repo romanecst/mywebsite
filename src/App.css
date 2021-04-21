@@ -112,6 +112,15 @@ a:hover {
   text-decoration: underline;
 }
 
+#popover {
+  clip-path: polygon(100% 0, 100% 75%, 60% 76%, 50% 100%, 40% 75%, 0 75%, 0 0);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 10px;
+  padding-top: 0;
+  z-index: 10;
+}
+
 
 .info {
 
@@ -130,7 +139,7 @@ a:hover {
   color: white;
   padding: 20px;
   font-size: 18px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 
@@ -163,7 +172,7 @@ a:hover {
 }
 
 #circle-left {
-  width: 75px;
+  min-width: 75px;
   height: 150px; /* as the half of the width */
   background-color: rgba(255, 255, 255, 0.3);;
   border-top-left-radius: 110px;  /* 100px of height + 10px of border */
@@ -173,7 +182,7 @@ a:hover {
 }
 
 #circle-right {
-  width: 75px;
+  min-width: 75px;
   height: 150px; /* as the half of the width */
   background-color: rgba(255, 255, 255, 0.3);;
   border-top-right-radius: 110px;  /* 100px of height + 10px of border */

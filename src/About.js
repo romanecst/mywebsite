@@ -1,6 +1,8 @@
+import React, {useState, useRef} from "react";
+
 import Nav from './Nav';
 import solar from './assets/solar2.gif';
-import React, {useState} from "react";
+
 
 export default function About() {
  const [tab, setTab] = useState(false);
@@ -8,6 +10,10 @@ export default function About() {
  const [space, setSpace] = useState({display:'none'});
  const [travel, setTravel] = useState({display:'none'});
  const [cook, setCook] = useState({display:'none'});
+ const [popover, setPopover] = useState('block');
+
+ const infoRef = useRef();
+
  let general = 'tab';
  let interest = '';
  let dispI = {display:'none'};
@@ -35,14 +41,18 @@ export default function About() {
         <div style={dispI}>
           <h3 style={{color:'white', fontSize:55}}>my interests</h3>
           <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-          <div id='circle-left'></div><div id='likes'>
-              <img src='https://media.giphy.com/media/61dkbcuaYYv1ykvJnB/giphy.gif' width='150' style={{position:'relative', bottom:20, right:`55px`, cursor:'pointer'}} onClick={()=>{setSports({}); setSpace({display:'none'}); setTravel({display:'none'}); setCook({display:'none'});}}/>
-              <img src={solar} width='160' style={{position:'relative', bottom:15,right:`20px`, cursor:'pointer'}} onClick={()=>{setSports({display:'none'}); setSpace({}); setTravel({display:'none'}); setCook({display:'none'});}}/>
-              <img src='https://media.giphy.com/media/ckrbT1rPtrt1rGM19p/giphy.gif' width='130' style={{position:'relative', bottom:5,right:`-15px`, cursor:'pointer'}} onClick={()=>{setSports({display:'none'}); setSpace({display:'none'}); setTravel({}); setCook({display:'none'});}}/>
-              <img src='https://media.giphy.com/media/KfxPgR9Xb6lRvlFa8x/giphy.gif' width='100' style={{position:'relative', bottom:35, right:`-50px`, cursor:'pointer'}} onClick={()=>{setSports({display:'none'}); setSpace({display:'none'}); setTravel({display:'none'}); setCook({});}}/>
+            <div id='popover' style={{position:'relative', bottom:110, right:'-160px', display:popover}}>
+              <p >Click me!</p>
+            </div>
+            <div id='circle-left'></div><div id='likes'>
+              <img src='https://media.giphy.com/media/61dkbcuaYYv1ykvJnB/giphy.gif' width='150' style={{position:'relative', bottom:20, right:`55px`, cursor:'pointer'}} onClick={()=>{infoRef.current.scrollIntoView({ behavior: 'smooth' });setPopover('none');setSports({}); setSpace({display:'none'}); setTravel({display:'none'}); setCook({display:'none'});}}/>
+              <img src={solar} width='160' style={{position:'relative', bottom:15,right:`20px`, cursor:'pointer'}} onClick={()=>{infoRef.current.scrollIntoView({ behavior: 'smooth' });setSports({display:'none'}); setSpace({}); setTravel({display:'none'}); setCook({display:'none'});setPopover('none');}}/>
+              <img src='https://media.giphy.com/media/ckrbT1rPtrt1rGM19p/giphy.gif' width='130' style={{position:'relative', bottom:5,right:`-15px`, cursor:'pointer'}} onClick={()=>{infoRef.current.scrollIntoView({ behavior: 'smooth' });setPopover('none');setSports({display:'none'}); setSpace({display:'none'}); setTravel({}); setCook({display:'none'});}}/>
+              <img src='https://media.giphy.com/media/KfxPgR9Xb6lRvlFa8x/giphy.gif' width='100' style={{position:'relative', bottom:35, right:`-50px`, cursor:'pointer'}} onClick={()=>{infoRef.current.scrollIntoView({ behavior: 'smooth' });setPopover('none');setSports({display:'none'}); setSpace({display:'none'}); setTravel({display:'none'}); setCook({});}}/>
               </div>  <div id='circle-right'></div>
             </div>
            
+           <div ref={infoRef}>
             <div className='info' style={sports}>
               <div className='info-content'>
                 
@@ -56,8 +66,8 @@ export default function About() {
               <div className='info-content'>
                 
                 <h3>Space</h3>
-                <p>I am fascinated by our solar system and more broadly the universe.<br/>
-                  I spend a lot of my free time learning more about space and if I had to a crazy job to do I would definitely become an astronaut. 
+                <p>I am fascinated by our solar system and more broadly the universe.
+                  I spend a lot of my free time learning more about space and if I had to choose an atypical job to do I would definitely become an astronaut. 
                 </p>
               </div>
             </div>
@@ -67,7 +77,7 @@ export default function About() {
                 <h3>Travelling</h3>
                 <p>
                   I am very lucky to travelled a lot since a young age and this is probably why I have decided to live abroad.<br/> 
-                  One day I hope to have visited 3 different countries on each of the continents.
+                  One day I hope to have visited at least 3 different countries on each of the continents.
                 </p>
               </div>
             </div>
@@ -79,6 +89,7 @@ export default function About() {
                   I especially love baking for the precision it requires. I love to watch and get inspired from the Great British Bakeoff.
                 </p>
               </div>
+            </div>
             </div>
         </div>
         <div style={dispG}>
@@ -94,7 +105,7 @@ export default function About() {
               As for my training, I completed a professional training course in JavaScript and I learnt Python during my Bachelors at the University of Warwick.
               </p>
               <p className='summary'>
-              I am experience with leading a small team in a fast paced project. And I am able to work on my own initiative or as part of a team.
+              I am experienced with leading a small team in a fast paced project. And I am able to work on my own initiative or as part of a team.
               In addition, I have strong background in business from my degree at Warwick.
             </p>
           </div>
