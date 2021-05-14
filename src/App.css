@@ -147,7 +147,6 @@ a:hover {
   margin-top: 57.5px;
   margin-bottom: 57.5px;
   background-color: rgba(255, 255, 255, 0.5);
-  width: 650px
 }
 
 .content {
@@ -171,8 +170,15 @@ a:hover {
   padding-left: 40px;
 }
 
+#small {
+  color: white;
+  font-size: 22px;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
 #circle-left {
-  min-width: 75px;
+
   height: 150px; /* as the half of the width */
   background-color: rgba(255, 255, 255, 0.3);;
   border-top-left-radius: 110px;  /* 100px of height + 10px of border */
@@ -182,7 +188,7 @@ a:hover {
 }
 
 #circle-right {
-  min-width: 75px;
+
   height: 150px; /* as the half of the width */
   background-color: rgba(255, 255, 255, 0.3);;
   border-top-right-radius: 110px;  /* 100px of height + 10px of border */
@@ -199,12 +205,12 @@ a:hover {
   border-left: 0;
   border-right: 0;
   height: 150px;
-  min-width: 600px;
+
 
 }
 
 .poly {
-  clip-path: polygon(75% 15%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0, 65% 0);
+  clip-path: polygon(75% 10%, 85% 0, 100% 0, 100% 100%, 0 100%, 0 0, 65% 0);
   overflow:scroll;
 }
 
